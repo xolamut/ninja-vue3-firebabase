@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 009 - methods and click events</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+    <h1>Methods and click events in Vue</h1>
+    <div id="app">
+        <p>{{ title }} - {{ author }} - {{ age }}</p>
+        <button v-on:click="age++">Increase age</button>
+        <button v-on:click="age--">Decrease age</button>
+        <div @click="title = 'Something else'">Change book title</div>
+        <div v-on:click="changeTitle">Change book title 2</div>
+        <div v-on:click="changeTitle2('How to learn Ruby')">Change book title 3</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
